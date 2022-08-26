@@ -11,10 +11,16 @@ import UIKit
 class ViewController: UIViewController {
     
     private let database = Database.database().reference()
+    
+    private let firebaseManager = FirebaseAuthManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("hi")
+        if firebaseManager.isUserSignedIn {
+            // Navigate to users list
+        } else {
+            // navigate to sign in page
+        }
         let button = UIButton(frame: CGRect(x: 20, y: 200, width: view.frame.size.width - 40, height: 50))
         button.setTitle("Add Entry", for: .normal)
         button.setTitleColor(.white, for: .normal)

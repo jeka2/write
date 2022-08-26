@@ -15,6 +15,7 @@
 		CC7B481E28B6990800A3A2B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC7B481D28B6990800A3A2B6 /* GoogleService-Info.plist */; };
 		CC88FA6728B8505300851DEF /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88FA6628B8505300851DEF /* FirebaseAuthManager.swift */; };
 		CC88FA6928B8505F00851DEF /* FirebaseDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88FA6828B8505F00851DEF /* FirebaseDatabaseManager.swift */; };
+		CC88FA6D28B85B5D00851DEF /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88FA6C28B85B5D00851DEF /* AuthenticationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CC7B481D28B6990800A3A2B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CC88FA6628B8505300851DEF /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		CC88FA6828B8505F00851DEF /* FirebaseDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseManager.swift; sourceTree = "<group>"; };
+		CC88FA6C28B85B5D00851DEF /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,8 @@
 		CC7B480428B662D500A3A2B6 /* Writing */ = {
 			isa = PBXGroup;
 			children = (
+				CC88FA6B28B85AE300851DEF /* Controllers */,
+				CC88FA6A28B85ADD00851DEF /* Views */,
 				CC88FA6428B847FB00851DEF /* Utils */,
 				CC7B480528B662D500A3A2B6 /* AppDelegate.swift */,
 				CC7B480928B662D500A3A2B6 /* ViewController.swift */,
@@ -108,6 +112,21 @@
 				CC88FA6828B8505F00851DEF /* FirebaseDatabaseManager.swift */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		CC88FA6A28B85ADD00851DEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CC88FA6B28B85AE300851DEF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CC88FA6C28B85B5D00851DEF /* AuthenticationViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +246,7 @@
 			files = (
 				CC88FA6728B8505300851DEF /* FirebaseAuthManager.swift in Sources */,
 				CC88FA6928B8505F00851DEF /* FirebaseDatabaseManager.swift in Sources */,
+				CC88FA6D28B85B5D00851DEF /* AuthenticationViewController.swift in Sources */,
 				CC7B480A28B662D500A3A2B6 /* ViewController.swift in Sources */,
 				CC7B480628B662D500A3A2B6 /* AppDelegate.swift in Sources */,
 			);

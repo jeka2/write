@@ -19,15 +19,17 @@ class ViewController: UIViewController {
         if firebaseManager.isUserSignedIn {
             // Navigate to users list
         } else {
-            // navigate to sign in page
+            let vc = AuthenticationViewController()
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true)
         }
-        let button = UIButton(frame: CGRect(x: 20, y: 200, width: view.frame.size.width - 40, height: 50))
-        button.setTitle("Add Entry", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .link
-        button.addTarget(self, action: #selector(addNewEntry), for: .touchUpInside)
-        view.backgroundColor = .white
-        view.addSubview(button)
+//        let button = UIButton(frame: CGRect(x: 20, y: 200, width: view.frame.size.width - 40, height: 50))
+//        button.setTitle("Add Entry", for: .normal)
+//        button.setTitleColor(.white, for: .normal)
+//        button.backgroundColor = .link
+//        button.addTarget(self, action: #selector(addNewEntry), for: .touchUpInside)
+//        view.backgroundColor = .white
+//        view.addSubview(button)
     }
     
     @objc private func addNewEntry() {

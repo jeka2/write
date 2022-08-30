@@ -23,8 +23,8 @@ struct Character: Codable {
     let birthday: Date
     let skills: [String]
     let appearance: [String]
-    let allegiances: [Organization]
-    let relationships: [Relationship]
+    let allegiances: [UUID] // organization UUID
+    let relationships: [UUID] // relationship UUID
     let ethnicity: String
     let flaws: [String]
     let strength: [String]

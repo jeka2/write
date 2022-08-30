@@ -10,5 +10,5 @@ import Foundation
 struct Place: Codable {
     let uuid: UUID
     let name: String
-    let appearsIn: [Chapter]
+    let appearsInChapter: [UUID] // chapters
 }

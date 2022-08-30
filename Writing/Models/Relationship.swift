@@ -18,7 +18,7 @@ enum RelationshipImportance: String, Codable {
 
 struct Relationship: Codable {
     let uuid: UUID
-    let participats: [Character]
+    let participats: [UUID]
     let relationshipImportance: RelationshipImportance
     let type: RelationshipType
 }

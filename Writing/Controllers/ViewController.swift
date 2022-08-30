@@ -38,7 +38,11 @@ class ViewController: UIViewController {
 //        databaseManager.setInstance(of: "Bla Blah") {
 //            print("hi")
 //        }
-        databaseManager.createChapter(title: "Chapter 1")
+//        databaseManager.createChapter(title: "Chapter 1")
+//        databaseManager.createCharacter()
+//        databaseManager.createRelationship()
+//        databaseManager.createOrganization()
+        databaseManager.createFictionalName()
     }
 
 

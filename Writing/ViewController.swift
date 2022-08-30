@@ -35,9 +35,10 @@ class ViewController: UIViewController {
     }
     
     @objc private func addNewEntry() {
-        databaseManager.setInstance(of: "Bla Blah") {
-            print("hi")
-        }
+//        databaseManager.setInstance(of: "Bla Blah") {
+//            print("hi")
+//        }
+        databaseManager.createChapter(title: "Chapter 1")
     }
 
 

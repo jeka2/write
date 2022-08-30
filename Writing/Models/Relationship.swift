@@ -18,7 +18,6 @@ enum RelationshipType: String, Codable {
 enum RelationshipImportance: String, Codable {
     case important = "important"
     case somewhatImportant = "somewhatImportant"
-    case unimportant = "unimportant"
 }
 
 struct Relationship {

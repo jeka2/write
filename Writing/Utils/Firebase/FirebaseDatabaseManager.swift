@@ -24,14 +24,27 @@ class FirebaseDatabaseManager {
     func setInstance(of value: String, completion: @escaping () -> ()) {
         typealias data = DummyData
         let object: [String: Any] = [
-            "titleName": "s",
+            "titleName": "My First Book",
             "plotPoints": ["first thing happens", "second things happens", "third thing happens"],
-            "chapters": [data.chapters.map{ $0.uuid }],
-            "characters": [data.characters.map{ $0.uuid }],
-            "organizations": [data.organizations.map { $0.uuid }],
-            "fictionalNames": [data.fictionalNames.map { $0.uuid }]
+            "chapters": [data.chapters.map{ $0.uuid.uuidString }],
+            "characters": [data.characters.map{ $0.uuid.uuidString }],
+            "organizations": [data.organizations.map { $0.uuid.uuidString }],
+            "fictionalNames": [data.fictionalNames.map { $0.uuid.uuidString }],
+            "relationships": [data.relationships.map { $0.uuid.uuidString }]
         ]
         reference.child("titles").setValue(object)
+    }
+    
+    func createChapter(title: String) {
+        let dummyChapter = Chapter(uuid: UUID.init(), name: "Chapter 4", text: "This is the text for chapter 4", appearingCharacters: [DummyData.characters[0], DummyData.characters[1]], summary: ["This happened", "This happened too"])
+        let object: [String: Any] = [
+            "uuid": dummyChapter.uuid.uuidString,
+            "name": dummyChapter.name,
+            "text": dummyChapter.text,
+            "appearingCharacters": dummyChapter.appearingCharacters.map { $0.uuid.uuidString },
+            "summary": dummyChapter.summary
+        ]
+        reference.child("chapters").setValue([object])
     }
     
 }

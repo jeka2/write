@@ -10,7 +10,8 @@ import Foundation
 struct Chapter {
     let uuid: UUID
     let name: String
-    let sections: [UUID]
+    let text: String
     let appearingCharacters: [Character]
+    let nextChapter: UUID?
     let summary: [String] // string for bullet points
 }

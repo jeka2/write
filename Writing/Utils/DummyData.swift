@@ -37,7 +37,7 @@ struct DummyData {
                   birthday: Date(),
                   skills: ["Magic", "Plot Armor"],
                   appearance: ["Black Hair", "Round Glasses", "British Accent"],
-                  allegiances: [organizations[1]],
+                  allegiances: [organizations[0]],
                   relationships: [],
                   ethnicity: "Leprecaun",
                   flaws: ["Stuttering", "Bad Eyesight"],
@@ -55,7 +55,7 @@ struct DummyData {
                   birthday: Date(),
                   skills: ["The Force", "Plot Armor", "Light Saber Skills"],
                   appearance: ["Brown Hair", "Robes"],
-                  allegiances: [organizations[1], organizations[2]],
+                  allegiances: [organizations[0], organizations[1]],
                   relationships: [],
                   ethnicity: "Main Character",
                   flaws: ["Egotistical"],
@@ -73,7 +73,7 @@ struct DummyData {
                   birthday: Date(),
                   skills: ["Jutsu", "Plot Armor"],
                   appearance: ["Yellow Hair", "Headband"],
-                  allegiances: [organizations[3]],
+                  allegiances: [organizations[2]],
                   relationships: [],
                   ethnicity: "Main Character",
                   flaws: ["Unintelligent"],
@@ -83,22 +83,24 @@ struct DummyData {
                   goals: ["Help Friends", "Get Stronger"])
     ]
     
-    static let chapterSections = [
-        ChapterSection(uuid: UUID(uuidString: "04D32F29-B9E3-4FA8-A99A-CEC1B6A687A3") ?? UUID.init(), text: "Section 1"),
-        ChapterSection(uuid: UUID(uuidString: "CCC375F3-33D2-48D3-A276-4ED1F39299D9") ?? UUID.init(), text: "Section 2"),
-        ChapterSection(uuid: UUID(uuidString: "49DB3FE1-E6F4-4F95-89A3-A0690E0D5981") ?? UUID.init(), text: "Section 3")
+    static let relationships = [
+        Relationship(uuid: UUID(uuidString: "568499CA-4A27-4889-9098-314A36AEE484") ?? UUID.init(), participats: [characters[0], characters[2]], relationshipImportance: .important, type: .ally),
+        
+        Relationship(uuid: UUID(uuidString: "668499CA-4A27-4889-9098-314A36AEE485") ?? UUID.init(), participats: [characters[2], organizations[1]], relationshipImportance: .somewhatImportant, type: .enemy),
+        
+        Relationship(uuid: UUID(uuidString: "768499CA-4A27-4889-9098-314A36AEE486") ?? UUID.init(), participats: [organizations[0], organizations[1]], relationshipImportance: .important, type: .enemy)
     ]
     
     static let chapters = [
-        Chapter(uuid: UUID(uuidString: "E86C6062-75F8-4D2C-8109-152BD67BDB26") ?? UUID.init(), name: "Chapter 1", sections: chapterSections.map{ $0.uuid }, appearingCharacters: [characters[1], characters[2]], summary: ["Something happened", "Something else happened", "A third thing happened"]),
-        Chapter(uuid: UUID(uuidString: "1440517A-A0E8-4A9E-B872-45008A9F6CB2") ?? UUID.init(), name: "Chapter 2", sections: chapterSections.map{ $0.uuid }, appearingCharacters: [characters[2]], summary: ["Something happened", "Something else happened", "A third thing happened"]),
-        Chapter(uuid: UUID(uuidString: "1C6C4069-63CA-4712-AA87-6F6DD62B7595") ?? UUID.init(), name: "Chapter 3", sections: chapterSections.map{ $0.uuid }, appearingCharacters: [characters[2], characters[3]], summary: ["Something happened", "Something else happened", "A third thing happened"])
+        Chapter(uuid: UUID(uuidString: "E86C6062-75F8-4D2C-8109-152BD67BDB26") ?? UUID.init(), name: "Chapter 1", text: "This is the text for chapter 1", appearingCharacters: [characters[0], characters[1]], nextChapter: UUID(uuidString: "1440517A-A0E8-4A9E-B872-45008A9F6CB2") ?? UUID.init(), summary: ["Something happened", "Something else happened", "A third thing happened"]),
+        Chapter(uuid: UUID(uuidString: "1440517A-A0E8-4A9E-B872-45008A9F6CB2") ?? UUID.init(), name: "Chapter 2", text: "This is the text for chapter 2", appearingCharacters: [characters[2]], nextChapter: UUID(uuidString: "1C6C4069-63CA-4712-AA87-6F6DD62B7595") ?? UUID.init(), summary: ["Something happened", "Something else happened", "A third thing happened"]),
+        Chapter(uuid: UUID(uuidString: "1C6C4069-63CA-4712-AA87-6F6DD62B7595") ?? UUID.init(), name: "Chapter 3", text: "This is the text for chapter 3", appearingCharacters: [characters[0], characters[2]], nextChapter: nil, summary: ["Something happened", "Something else happened", "A third thing happened"])
     ]
     
     static let places = [
-        Place(uuid: UUID(uuidString: "7CD0F95C-2685-47B4-A3DB-949AB8B4A5FE") ?? UUID.init(), name: "Hogwarts", appearsIn: [chapters[1], chapters[2]]),
-        Place(uuid: UUID(uuidString: "CF49755F-1CD1-4D2D-9183-2098C5356ECF") ?? UUID.init(), name: "Magnolia", appearsIn: [chapters[1], chapters[3]]),
-        Place(uuid: UUID(uuidString: "E20EB299-DB31-4D64-95DE-84E823087182") ?? UUID.init(), name: "Hidden Leaf Village", appearsIn: [chapters[2]])
+        Place(uuid: UUID(uuidString: "7CD0F95C-2685-47B4-A3DB-949AB8B4A5FE") ?? UUID.init(), name: "Hogwarts", appearsIn: [chapters[0], chapters[1]]),
+        Place(uuid: UUID(uuidString: "CF49755F-1CD1-4D2D-9183-2098C5356ECF") ?? UUID.init(), name: "Magnolia", appearsIn: [chapters[0], chapters[2]]),
+        Place(uuid: UUID(uuidString: "E20EB299-DB31-4D64-95DE-84E823087182") ?? UUID.init(), name: "Hidden Leaf Village", appearsIn: [chapters[1]])
     ]
     
     

@@ -6,6 +6,7 @@
 //
 
 import FirebaseDatabase
+import Foundation
 
 class FirebaseDatabaseManager {
     
@@ -36,7 +37,7 @@ class FirebaseDatabaseManager {
     }
     
     func createChapter(title: String) {
-        let dummyChapter = Chapter(uuid: UUID.init(), name: "Chapter 4", text: "This is the text for chapter 4", appearingCharacters: [DummyData.characters[0], DummyData.characters[1]], summary: ["This happened", "This happened too"])
+        let dummyChapter = Chapter(uuid: UUID.init(), name: "Chapter 4", text: "This is the text for chapter 4", appearingCharacters: [DummyData.characters[0], DummyData.characters[1]], nextChapter: UUID.init(), summary: ["This happened", "This happened too"])
         let object: [String: Any] = [
             "uuid": dummyChapter.uuid.uuidString,
             "name": dummyChapter.name,

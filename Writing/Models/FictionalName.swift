@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FictionalName {
+struct FictionalName: Codable {
     let uuid: UUID
     let name: String
     let description: String

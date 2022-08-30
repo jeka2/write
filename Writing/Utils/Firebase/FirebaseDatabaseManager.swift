@@ -5,6 +5,7 @@
 //  Created by Yevgeniy Ivanov on 8/25/22.
 //
 
+import CodableFirebase
 import FirebaseDatabase
 import Foundation
 
@@ -37,15 +38,12 @@ class FirebaseDatabaseManager {
     }
     
     func createChapter(title: String) {
-        let dummyChapter = Chapter(uuid: UUID.init(), name: "Chapter 4", text: "This is the text for chapter 4", appearingCharacters: [DummyData.characters[0], DummyData.characters[1]], nextChapter: UUID.init(), summary: ["This happened", "This happened too"])
-        let object: [String: Any] = [
-            "uuid": dummyChapter.uuid.uuidString,
-            "name": dummyChapter.name,
-            "text": dummyChapter.text,
-            "appearingCharacters": dummyChapter.appearingCharacters.map { $0.uuid.uuidString },
-            "summary": dummyChapter.summary
-        ]
-        reference.child("chapters").setValue([object])
+        let dummyChapter = Chapter(uuid: UUID.init(), name: "Chapter 4", text: "This is the text for chapter 4", appearingCharacters: [DummyData.characters[0].uuid, DummyData.characters[1].uuid], nextChapter: UUID.init(), summary: ["This happened", "This happened too"])
+        do {
+            let data = try FirebaseEncoder().encode(dummyChapter)
+        } catch {
+            
+        }
     }
     
 }

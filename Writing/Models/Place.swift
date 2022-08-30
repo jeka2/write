@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Place {
+struct Place: Codable {
     let uuid: UUID
     let name: String
     let appearsIn: [Chapter]

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Organization: RelationshipProtocol {
+struct Organization: Codable {
     let uuid: UUID
     let name: String
     let goals: [String]

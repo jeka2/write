@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum Gender: String {
+enum Gender: String, Codable {
     case male = "male"
     case female = "female"
     case other = "other"
 }
 
-struct Character: RelationshipProtocol {
+struct Character: Codable {
     let uuid: UUID
     let firstName: String
     let lastName: String

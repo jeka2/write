@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Chapter {
+struct Chapter: Codable {
     let uuid: UUID
     let name: String
     let text: String
-    let appearingCharacters: [Character]
+    let appearingCharacters: [UUID]
     let nextChapter: UUID?
     let summary: [String] // string for bullet points
 }

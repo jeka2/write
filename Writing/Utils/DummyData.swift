@@ -86,15 +86,15 @@ struct DummyData {
     static let relationships = [
         Relationship(uuid: UUID(uuidString: "568499CA-4A27-4889-9098-314A36AEE484") ?? UUID.init(), participats: [characters[0], characters[2]], relationshipImportance: .important, type: .ally),
         
-        Relationship(uuid: UUID(uuidString: "668499CA-4A27-4889-9098-314A36AEE485") ?? UUID.init(), participats: [characters[2], organizations[1]], relationshipImportance: .somewhatImportant, type: .enemy),
+        Relationship(uuid: UUID(uuidString: "668499CA-4A27-4889-9098-314A36AEE485") ?? UUID.init(), participats: [characters[2], characters[1]], relationshipImportance: .somewhatImportant, type: .enemy),
         
-        Relationship(uuid: UUID(uuidString: "768499CA-4A27-4889-9098-314A36AEE486") ?? UUID.init(), participats: [organizations[0], organizations[1]], relationshipImportance: .important, type: .enemy)
+        Relationship(uuid: UUID(uuidString: "768499CA-4A27-4889-9098-314A36AEE486") ?? UUID.init(), participats: [characters[0], characters[1]], relationshipImportance: .important, type: .enemy)
     ]
     
     static let chapters = [
-        Chapter(uuid: UUID(uuidString: "E86C6062-75F8-4D2C-8109-152BD67BDB26") ?? UUID.init(), name: "Chapter 1", text: "This is the text for chapter 1", appearingCharacters: [characters[0], characters[1]], nextChapter: UUID(uuidString: "1440517A-A0E8-4A9E-B872-45008A9F6CB2") ?? UUID.init(), summary: ["Something happened", "Something else happened", "A third thing happened"]),
-        Chapter(uuid: UUID(uuidString: "1440517A-A0E8-4A9E-B872-45008A9F6CB2") ?? UUID.init(), name: "Chapter 2", text: "This is the text for chapter 2", appearingCharacters: [characters[2]], nextChapter: UUID(uuidString: "1C6C4069-63CA-4712-AA87-6F6DD62B7595") ?? UUID.init(), summary: ["Something happened", "Something else happened", "A third thing happened"]),
-        Chapter(uuid: UUID(uuidString: "1C6C4069-63CA-4712-AA87-6F6DD62B7595") ?? UUID.init(), name: "Chapter 3", text: "This is the text for chapter 3", appearingCharacters: [characters[0], characters[2]], nextChapter: nil, summary: ["Something happened", "Something else happened", "A third thing happened"])
+        Chapter(uuid: UUID(uuidString: "E86C6062-75F8-4D2C-8109-152BD67BDB26") ?? UUID.init(), name: "Chapter 1", text: "This is the text for chapter 1", appearingCharacters: [characters[0].uuid, characters[1].uuid], nextChapter: UUID(uuidString: "1440517A-A0E8-4A9E-B872-45008A9F6CB2") ?? UUID.init(), summary: ["Something happened", "Something else happened", "A third thing happened"]),
+        Chapter(uuid: UUID(uuidString: "1440517A-A0E8-4A9E-B872-45008A9F6CB2") ?? UUID.init(), name: "Chapter 2", text: "This is the text for chapter 2", appearingCharacters: [characters[2].uuid], nextChapter: UUID(uuidString: "1C6C4069-63CA-4712-AA87-6F6DD62B7595") ?? UUID.init(), summary: ["Something happened", "Something else happened", "A third thing happened"]),
+        Chapter(uuid: UUID(uuidString: "1C6C4069-63CA-4712-AA87-6F6DD62B7595") ?? UUID.init(), name: "Chapter 3", text: "This is the text for chapter 3", appearingCharacters: [characters[0].uuid, characters[2].uuid], nextChapter: nil, summary: ["Something happened", "Something else happened", "A third thing happened"])
     ]
     
     static let places = [

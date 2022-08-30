@@ -6,10 +6,6 @@
 //
 import Foundation
 
-protocol RelationshipProtocol {
-    var uuid: UUID { get }
-}
-
 enum RelationshipType: String, Codable {
     case ally = "ally"
     case enemy = "enemy"
@@ -20,9 +16,9 @@ enum RelationshipImportance: String, Codable {
     case somewhatImportant = "somewhatImportant"
 }
 
-struct Relationship {
+struct Relationship: Codable {
     let uuid: UUID
-    let participats: [RelationshipProtocol]
+    let participats: [Character]
     let relationshipImportance: RelationshipImportance
     let type: RelationshipType
 }

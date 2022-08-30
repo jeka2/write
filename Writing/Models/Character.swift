@@ -7,15 +7,22 @@
 
 import Foundation
 
-struct Character {
+enum Gender: String {
+    case male = "male"
+    case female = "female"
+    case other = "other"
+}
+
+struct Character: RelationshipProtocol {
     let uuid: UUID
     let firstName: String
     let lastName: String
-    let middleName: String
-    let nickNames: [String]
+    let middleName: String?
+    let nickNames: [String]?
+    let gender: Gender
     let birthday: Date
     let skills: [String]
-    let appearance: String
+    let appearance: [String]
     let allegiances: [Organization]
     let relationships: [Relationship]
     let ethnicity: String

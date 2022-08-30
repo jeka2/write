@@ -22,6 +22,8 @@
 		CCC3093828BD7548001B65F8 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC3093728BD7548001B65F8 /* Character.swift */; };
 		CCC3093A28BD7684001B65F8 /* Relationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC3093928BD7684001B65F8 /* Relationship.swift */; };
 		CCC3093C28BD77C5001B65F8 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC3093B28BD77C5001B65F8 /* Organization.swift */; };
+		CCC3094128BD7AC4001B65F8 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC3094028BD7AC4001B65F8 /* DummyData.swift */; };
+		CCC3094328BE598D001B65F8 /* FictionalName.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC3094228BE598D001B65F8 /* FictionalName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		CCC3093728BD7548001B65F8 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		CCC3093928BD7684001B65F8 /* Relationship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationship.swift; sourceTree = "<group>"; };
 		CCC3093B28BD77C5001B65F8 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		CCC3094028BD7AC4001B65F8 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		CCC3094228BE598D001B65F8 /* FictionalName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FictionalName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				CC88FA6528B8504500851DEF /* Firebase */,
+				CCC3094028BD7AC4001B65F8 /* DummyData.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 				CCC3093728BD7548001B65F8 /* Character.swift */,
 				CCC3093928BD7684001B65F8 /* Relationship.swift */,
 				CCC3093B28BD77C5001B65F8 /* Organization.swift */,
+				CCC3094228BE598D001B65F8 /* FictionalName.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -270,7 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCC3094128BD7AC4001B65F8 /* DummyData.swift in Sources */,
 				CCC3093828BD7548001B65F8 /* Character.swift in Sources */,
+				CCC3094328BE598D001B65F8 /* FictionalName.swift in Sources */,
 				CC88FA6728B8505300851DEF /* FirebaseAuthManager.swift in Sources */,
 				CCC3093C28BD77C5001B65F8 /* Organization.swift in Sources */,
 				CC88FA6928B8505F00851DEF /* FirebaseDatabaseManager.swift in Sources */,

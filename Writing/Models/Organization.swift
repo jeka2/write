@@ -7,8 +7,10 @@
 
 import Foundation
 
-struct Organization {
+struct Organization: RelationshipProtocol {
     let uuid: UUID
     let name: String
+    let goals: [String]
     let relationships: [Relationship]
+    let members: [Character]
 }

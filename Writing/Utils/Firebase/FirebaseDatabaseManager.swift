@@ -22,16 +22,14 @@ class FirebaseDatabaseManager {
     }
     
     func setInstance(of value: String, completion: @escaping () -> ()) {
-        let sections = [ChapterSection(uuid: UUID.init(), text: "Something"), ChapterSection(uuid: UUID.init(), text: "Something 2"), ChapterSection(uuid: UUID.init(), text: "Something 3")]
-        let sections2 = [ChapterSection(uuid: UUID.init(), text: "Something"), ChapterSection(uuid: UUID.init(), text: "Something 2"), ChapterSection(uuid: UUID.init(), text: "Something 3")]
-        let chapter1 = Chapter(uuid: UUID.init(), sections: sections.map({ $0.uuid }), summary: ["This happened", "Then this happened", "Then the third thing happened"])
-        let chapter2 = Chapter(uuid: UUID.init(), sections: sections2.map({ $0.uuid }), summary: ["This happened", "Then this happened", "Then the third thing happened"])
+        typealias data = DummyData
         let object: [String: Any] = [
             "titleName": "s",
-            "plotPoints": [],
-            "chapters": [chapter1, chapter2],
-            
-            
+            "plotPoints": ["first thing happens", "second things happens", "third thing happens"],
+            "chapters": [data.chapters.map{ $0.uuid }],
+            "characters": [data.characters.map{ $0.uuid }],
+            "organizations": [data.organizations.map { $0.uuid }],
+            "fictionalNames": [data.fictionalNames.map { $0.uuid }]
         ]
         reference.child("titles").setValue(object)
     }

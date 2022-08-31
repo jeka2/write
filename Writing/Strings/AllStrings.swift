@@ -8,5 +8,5 @@
 struct AllStrings {
     
     static let firebaseEncodingError = "There was an issue with encoding this file"
-    
+    static let firebaseDecodingError = "There was an issue with decoding this file"
 }

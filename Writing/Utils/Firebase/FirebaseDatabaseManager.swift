@@ -35,8 +35,22 @@ class FirebaseDatabaseManager {
                           relationships: data.relationships.map { $0.uuid })
         do {
             let data = try FirebaseEncoder().encode(title)
-            reference.child("titles").setValue(data)
+            reference.child("titles/\(title.titleName)").setValue(data)
         } catch {
+            
+        }
+    }
+    
+    func getTitles(completion: @escaping (Result<[Title], Error>) -> ()) {
+        reference.child("titles").queryOrderedByKey().observeSingleEvent(of: .value) { snapshot in
+            guard let value = snapshot.value as? [String: Any] else { return }
+            let values = value.map { $0.value }
+            do {
+                let titles = try FirebaseDecoder().decode([Title].self, from: values)
+                completion(.success(titles))
+            } catch {
+                completion(.failure(FirebaseErrors.decodingError))
+            }
             
         }
     }
@@ -55,6 +69,7 @@ class FirebaseDatabaseManager {
         do {
             let data = try FirebaseEncoder().encode(dummyChapter)
             reference.updateChildValues(["chapters/\(key)": data])
+            reference.updateChildValues(["titles/My first book/chapters/\(key)": dummyChapter.uuid.uuidString])
         } catch {
             
         }
@@ -86,6 +101,7 @@ class FirebaseDatabaseManager {
         do {
             let data = try FirebaseEncoder().encode(dummyPlace)
             reference.updateChildValues(["places/\(key)": data])
+            reference.updateChildValues(["titles/My first book/places/\(key)": dummyPlace.uuid.uuidString])
         } catch {
             
         }
@@ -131,6 +147,7 @@ class FirebaseDatabaseManager {
         do {
             let data = try FirebaseEncoder().encode(dummyCharacter)
             reference.updateChildValues(["characters/\(key)": data])
+            reference.updateChildValues(["titles/My first book/characters/\(key)": dummyCharacter.uuid.uuidString])
         } catch {
              
         }
@@ -159,6 +176,7 @@ class FirebaseDatabaseManager {
         do {
             let data = try FirebaseEncoder().encode(dummyRelationship)
             reference.updateChildValues(["relationships/\(key)": data])
+            reference.updateChildValues(["titles/My first book/relationships/\(key)": dummyRelationship.uuid.uuidString])
         } catch {
             
         }
@@ -188,6 +206,7 @@ class FirebaseDatabaseManager {
         do {
             let data = try FirebaseEncoder().encode(dummyOrganization)
             reference.updateChildValues(["organizations/\(key)": data])
+            reference.updateChildValues(["titles/My first book/organizations/\(key)": dummyOrganization.uuid.uuidString])
         } catch {
             
         }
@@ -216,6 +235,7 @@ class FirebaseDatabaseManager {
         do {
             let data = try FirebaseEncoder().encode(dummyFictionalName)
             reference.updateChildValues(["fictionalNames/\(key)": data])
+            reference.updateChildValues(["titles/My first book/fictionalNames/\(key)": dummyFictionalName.uuid.uuidString])
         } catch {
             
         }

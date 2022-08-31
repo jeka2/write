@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4CF2DB7F7B2C62F1878B7DD6 /* Pods_Writing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB07FDE4B1298BC17A1EB04B /* Pods_Writing.framework */; };
 		CC55BCBF28BE9A990015B1BE /* Firebase+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55BCBE28BE9A990015B1BE /* Firebase+Errors.swift */; };
-		CC55BCC328BE9E000015B1BE /* AllStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55BCC228BE9E000015B1BE /* AllStrings.swift */; };
+		CC55BCC328BE9E000015B1BE /* AllStrings.strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55BCC228BE9E000015B1BE /* AllStrings.strings.swift */; };
 		CC55BCC528BEBBE40015B1BE /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55BCC428BEBBE40015B1BE /* Title.swift */; };
 		CC7B480628B662D500A3A2B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B480528B662D500A3A2B6 /* AppDelegate.swift */; };
 		CC7B480A28B662D500A3A2B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B480928B662D500A3A2B6 /* ViewController.swift */; };
@@ -33,7 +33,7 @@
 		3BA54F6112BAEC7FF78DE782 /* Pods-Writing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Writing.release.xcconfig"; path = "Target Support Files/Pods-Writing/Pods-Writing.release.xcconfig"; sourceTree = "<group>"; };
 		BB07FDE4B1298BC17A1EB04B /* Pods_Writing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Writing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC55BCBE28BE9A990015B1BE /* Firebase+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Errors.swift"; sourceTree = "<group>"; };
-		CC55BCC228BE9E000015B1BE /* AllStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStrings.swift; sourceTree = "<group>"; };
+		CC55BCC228BE9E000015B1BE /* AllStrings.strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStrings.strings.swift; sourceTree = "<group>"; };
 		CC55BCC428BEBBE40015B1BE /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		CC7B480228B662D500A3A2B6 /* Writing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Writing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7B480528B662D500A3A2B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 		CC55BCC028BE9CBE0015B1BE /* Strings */ = {
 			isa = PBXGroup;
 			children = (
-				CC55BCC228BE9E000015B1BE /* AllStrings.swift */,
+				CC55BCC228BE9E000015B1BE /* AllStrings.strings.swift */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -310,7 +310,7 @@
 				CCC3093828BD7548001B65F8 /* Character.swift in Sources */,
 				CCC3094328BE598D001B65F8 /* FictionalName.swift in Sources */,
 				CC88FA6728B8505300851DEF /* FirebaseAuthManager.swift in Sources */,
-				CC55BCC328BE9E000015B1BE /* AllStrings.swift in Sources */,
+				CC55BCC328BE9E000015B1BE /* AllStrings.strings.swift in Sources */,
 				CCC3093C28BD77C5001B65F8 /* Organization.swift in Sources */,
 				CC88FA6928B8505F00851DEF /* FirebaseDatabaseManager.swift in Sources */,
 				CC88FA6D28B85B5D00851DEF /* AuthenticationViewController.swift in Sources */,

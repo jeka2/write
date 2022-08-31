@@ -35,27 +35,24 @@ class ViewController: UIViewController {
     }
     
     @objc private func addNewEntry() {
-//        databaseManager.setInstance(of: "Bla Blah") {
-//            print("hi")
-//        }
-//        databaseManager.createChapter(title: "Chapter 1")
-//        databaseManager.createCharacter()
-//        databaseManager.createRelationship()
-//        databaseManager.createOrganization()
-//        databaseManager.createFictionalName()
-//        databaseManager.createPlace()
-//        databaseManager.createCharacter()
-//        databaseManager.createRelationship()
-//        databaseManager.createFictionalName()
+        databaseManager.createChapter(title: "Chapter 1")
+        databaseManager.createCharacter()
+        databaseManager.createRelationship()
         databaseManager.createOrganization()
-        databaseManager.getFictionalNames { result in
-            switch result {
-            case .success(let chapters):
-                print(chapters)
-            case .failure(let error):
-                print(error)
-            }
-        }
+        databaseManager.createFictionalName()
+        databaseManager.createPlace()
+        databaseManager.createCharacter()
+        databaseManager.createRelationship()
+        databaseManager.createFictionalName()
+        databaseManager.createOrganization()
+//        databaseManager.getFictionalNames { result in
+//            switch result {
+//            case .success(let chapters):
+//                print(chapters)
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
 
 

@@ -17,9 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if authManager.isUserSignedIn {
-            databaseManager.getInstance(of: "Something") {
-                print("hi")
-            }
+            
         } else {
             let vc = AuthenticationViewController()
             vc.modalPresentationStyle = .fullScreen
@@ -35,16 +33,15 @@ class ViewController: UIViewController {
     }
     
     @objc private func addNewEntry() {
-        databaseManager.createChapter(title: "Chapter 1")
-        databaseManager.createCharacter()
-        databaseManager.createRelationship()
-        databaseManager.createOrganization()
-        databaseManager.createFictionalName()
-        databaseManager.createPlace()
-        databaseManager.createCharacter()
-        databaseManager.createRelationship()
-        databaseManager.createFictionalName()
-        databaseManager.createOrganization()
+//        databaseManager.createChapter(title: "Chapter 1")
+//        databaseManager.createCharacter()
+//        databaseManager.createRelationship()
+//        databaseManager.createOrganization()
+//        databaseManager.createFictionalName()
+//        databaseManager.createPlace()
+//        databaseManager.createCharacter()
+//        databaseManager.createRelationship()
+//        databaseManager.createOrganization()
 //        databaseManager.getFictionalNames { result in
 //            switch result {
 //            case .success(let chapters):

@@ -19,12 +19,6 @@ class FirebaseDatabaseManager {
     
     private let reference = Database.database().reference()
     
-    func getInstance(of value: String, completion: @escaping () -> ()) {
-        reference.child(value).observeSingleEvent(of: .value) { snapshot in
-            print(snapshot)
-        }
-    }
-    
     func createTitle(of value: String, completion: @escaping () -> ()) {
         let title = Title(titleName: "My first book",
                           plotPoints: ["First thing happens", "Second thing happens","Third thing happens"],
@@ -255,55 +249,6 @@ class FirebaseDatabaseManager {
     }
     
 }
-//
-//master:
-//    projects:
-//        UUID:
-//ProjectName:
-//ProjectDescription:
-//Titles: Title
-//StartDate:
-//
-//title:
-//    titleName: String
-//Characters: [UUID]
-//Places:
-//Plotpoints:
-//Chapters:
-//
-//characters:
-//    UUID:
-//Age:
-//Nicknames:
-//Skills
-//Appearance
-//Relationships:
-//Ethnicity:
-//Flaws:
-//Strengths:
-//Arc:
-//Background:
-//Goal:
-//
-//chapters:
-//    UUID:
-//sections: [UUID]
-//summary: should be able to number
-//
-//sections:
-//    UUID:
-//    Text:
-//
-//subplots:
-//    UUID:
-//summaryInBulletPointForm:
-//
-//FictionalNames:
-//    UUID:
-//places:
-//  UUID
-//  name:
-//  appearsIn: [Chapter]
 
 
 

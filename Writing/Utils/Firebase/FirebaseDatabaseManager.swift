@@ -28,8 +28,8 @@ class FirebaseDatabaseManager {
                           fictionalNames: data.fictionalNames.map { $0.uuid },
                           relationships: data.relationships.map { $0.uuid })
         do {
-            let data = try FirebaseEncoder().encode(title)
-            reference.child("titles/\(title.titleName)").setValue(data)
+            let title = try FirebaseEncoder().encode(title)
+            reference.updateChildValues(["titles/My first book": title])
         } catch {
             
         }

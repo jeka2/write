@@ -11,6 +11,7 @@
 		CC55BCBF28BE9A990015B1BE /* Firebase+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55BCBE28BE9A990015B1BE /* Firebase+Errors.swift */; };
 		CC55BCC328BE9E000015B1BE /* AllStrings.strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55BCC228BE9E000015B1BE /* AllStrings.strings.swift */; };
 		CC55BCC528BEBBE40015B1BE /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55BCC428BEBBE40015B1BE /* Title.swift */; };
+		CC55BCEB28C143820015B1BE /* TitleCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55BCEA28C143820015B1BE /* TitleCellTableViewCell.swift */; };
 		CC7B480628B662D500A3A2B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B480528B662D500A3A2B6 /* AppDelegate.swift */; };
 		CC7B480A28B662D500A3A2B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B480928B662D500A3A2B6 /* ViewController.swift */; };
 		CC7B480F28B662D600A3A2B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC7B480E28B662D600A3A2B6 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		CC55BCBE28BE9A990015B1BE /* Firebase+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Errors.swift"; sourceTree = "<group>"; };
 		CC55BCC228BE9E000015B1BE /* AllStrings.strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStrings.strings.swift; sourceTree = "<group>"; };
 		CC55BCC428BEBBE40015B1BE /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		CC55BCEA28C143820015B1BE /* TitleCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCellTableViewCell.swift; sourceTree = "<group>"; };
 		CC7B480228B662D500A3A2B6 /* Writing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Writing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7B480528B662D500A3A2B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC7B480928B662D500A3A2B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,14 @@
 			name = SystemFiles;
 			sourceTree = "<group>";
 		};
+		CC55BCE928C143630015B1BE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CC55BCEA28C143820015B1BE /* TitleCellTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		CC7B47F928B662D500A3A2B6 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +174,7 @@
 		CC88FA6A28B85ADD00851DEF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CC55BCE928C143630015B1BE /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,6 +329,7 @@
 				CCC3093A28BD7684001B65F8 /* Relationship.swift in Sources */,
 				CC55BCC528BEBBE40015B1BE /* Title.swift in Sources */,
 				CC55BCBF28BE9A990015B1BE /* Firebase+Errors.swift in Sources */,
+				CC55BCEB28C143820015B1BE /* TitleCellTableViewCell.swift in Sources */,
 				CC7B480A28B662D500A3A2B6 /* ViewController.swift in Sources */,
 				CC7B480628B662D500A3A2B6 /* AppDelegate.swift in Sources */,
 				CCC3093628BD749E001B65F8 /* Place.swift in Sources */,

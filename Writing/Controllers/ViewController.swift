@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTableView()
+        
         checkIsUserLoggedIn()
     }
     
@@ -29,66 +31,54 @@ class ViewController: UIViewController {
             databaseManager.getTitles { [weak self] result in
                 switch result {
                 case .success(let titles):
-                    print(titles)
+                    self?.titles = titles
+                    self?.tableView.reloadData()
                 case .failure(let error):
                     print(error)
                 }
-                self?.tableView.reloadData()
             }
         } else {
             let vc = AuthenticationViewController()
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true)
         }
-        let button = UIButton(frame: CGRect(x: 20, y: 200, width: view.frame.size.width - 40, height: 50))
-        button.setTitle("Add Entry", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .link
-        button.addTarget(self, action: #selector(addNewEntry), for: .touchUpInside)
-        view.backgroundColor = .white
-        view.addSubview(button)
     }
     
     private func setupTableView() {
+        view.addSubview(tableView)
+        
         tableView.register(TitleCellTableViewCell.self, forCellReuseIdentifier: TitleCellTableViewCell.identifier)
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
+        
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            tableView.widthAnchor.constraint(equalTo: view.widthAnchor)
+        ])
     }
-    
-    @objc private func addNewEntry() {
-//        databaseManager.createChapter(title: "Chapter 1")
-//        databaseManager.createCharacter()
-//        databaseManager.createRelationship()
-//        databaseManager.createOrganization()
-//        databaseManager.createFictionalName()
-//        databaseManager.createPlace()
-//        databaseManager.createCharacter()
-//        databaseManager.createRelationship()
-//        databaseManager.createOrganization()
-//        databaseManager.getFictionalNames { result in
-//            switch result {
-//            case .success(let chapters):
-//                print(chapters)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-    }
-
 
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        4
+        titles.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("hi")
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if let cell = tableView.dequeueReusableCell(withIdentifier: TitleCellTableViewCell.identifier, for: indexPath) as? TitleCellTableViewCell {
             cell.textLabel?.text = titles[indexPath.row].titleName
-            
+            return cell
         }
         fatalError("Could not deque cell")
     }

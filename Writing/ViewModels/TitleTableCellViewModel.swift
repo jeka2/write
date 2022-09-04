@@ -13,7 +13,7 @@ struct TitleTableCellViewModel {
     let model: Title
     
     var titleString: NSMutableAttributedString {
-        let attributedString = NSMutableAttributedString(string: model.titleName)
+        let attributedString = NSMutableAttributedString(string: model.titleName.uppercased())
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 2
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))

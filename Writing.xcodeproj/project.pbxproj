@@ -11,7 +11,8 @@
 		CC55BCBF28BE9A990015B1BE /* Firebase+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55BCBE28BE9A990015B1BE /* Firebase+Errors.swift */; };
 		CC55BCC328BE9E000015B1BE /* AllStrings.strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55BCC228BE9E000015B1BE /* AllStrings.strings.swift */; };
 		CC55BCC528BEBBE40015B1BE /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55BCC428BEBBE40015B1BE /* Title.swift */; };
-		CC55BCEB28C143820015B1BE /* TitleCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55BCEA28C143820015B1BE /* TitleCellTableViewCell.swift */; };
+		CC55BCEB28C143820015B1BE /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55BCEA28C143820015B1BE /* TitleTableViewCell.swift */; };
+		CC55BCEE28C3B6EE0015B1BE /* TitleTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55BCED28C3B6EE0015B1BE /* TitleTableCellViewModel.swift */; };
 		CC7B480628B662D500A3A2B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B480528B662D500A3A2B6 /* AppDelegate.swift */; };
 		CC7B480A28B662D500A3A2B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B480928B662D500A3A2B6 /* ViewController.swift */; };
 		CC7B480F28B662D600A3A2B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC7B480E28B662D600A3A2B6 /* Assets.xcassets */; };
@@ -36,7 +37,8 @@
 		CC55BCBE28BE9A990015B1BE /* Firebase+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Errors.swift"; sourceTree = "<group>"; };
 		CC55BCC228BE9E000015B1BE /* AllStrings.strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStrings.strings.swift; sourceTree = "<group>"; };
 		CC55BCC428BEBBE40015B1BE /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
-		CC55BCEA28C143820015B1BE /* TitleCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCellTableViewCell.swift; sourceTree = "<group>"; };
+		CC55BCEA28C143820015B1BE /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		CC55BCED28C3B6EE0015B1BE /* TitleTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableCellViewModel.swift; sourceTree = "<group>"; };
 		CC7B480228B662D500A3A2B6 /* Writing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Writing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7B480528B662D500A3A2B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC7B480928B662D500A3A2B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,9 +116,17 @@
 		CC55BCE928C143630015B1BE /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				CC55BCEA28C143820015B1BE /* TitleCellTableViewCell.swift */,
+				CC55BCEA28C143820015B1BE /* TitleTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		CC55BCEC28C3B6CE0015B1BE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CC55BCED28C3B6EE0015B1BE /* TitleTableCellViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		CC7B47F928B662D500A3A2B6 = {
@@ -140,6 +150,7 @@
 		CC7B480428B662D500A3A2B6 /* Writing */ = {
 			isa = PBXGroup;
 			children = (
+				CC55BCEC28C3B6CE0015B1BE /* ViewModels */,
 				CC55BCC128BE9CC60015B1BE /* SystemFiles */,
 				CC55BCC028BE9CBE0015B1BE /* Strings */,
 				CC55BCBD28BE9A810015B1BE /* Extensions */,
@@ -321,6 +332,7 @@
 				CCC3093828BD7548001B65F8 /* Character.swift in Sources */,
 				CCC3094328BE598D001B65F8 /* FictionalName.swift in Sources */,
 				CC88FA6728B8505300851DEF /* FirebaseAuthManager.swift in Sources */,
+				CC55BCEE28C3B6EE0015B1BE /* TitleTableCellViewModel.swift in Sources */,
 				CC55BCC328BE9E000015B1BE /* AllStrings.strings.swift in Sources */,
 				CCC3093C28BD77C5001B65F8 /* Organization.swift in Sources */,
 				CC88FA6928B8505F00851DEF /* FirebaseDatabaseManager.swift in Sources */,
@@ -329,7 +341,7 @@
 				CCC3093A28BD7684001B65F8 /* Relationship.swift in Sources */,
 				CC55BCC528BEBBE40015B1BE /* Title.swift in Sources */,
 				CC55BCBF28BE9A990015B1BE /* Firebase+Errors.swift in Sources */,
-				CC55BCEB28C143820015B1BE /* TitleCellTableViewCell.swift in Sources */,
+				CC55BCEB28C143820015B1BE /* TitleTableViewCell.swift in Sources */,
 				CC7B480A28B662D500A3A2B6 /* ViewController.swift in Sources */,
 				CC7B480628B662D500A3A2B6 /* AppDelegate.swift in Sources */,
 				CCC3093628BD749E001B65F8 /* Place.swift in Sources */,

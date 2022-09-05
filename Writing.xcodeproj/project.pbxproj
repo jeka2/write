@@ -21,6 +21,10 @@
 		CC88FA6728B8505300851DEF /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88FA6628B8505300851DEF /* FirebaseAuthManager.swift */; };
 		CC88FA6928B8505F00851DEF /* FirebaseDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88FA6828B8505F00851DEF /* FirebaseDatabaseManager.swift */; };
 		CC88FA6D28B85B5D00851DEF /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88FA6C28B85B5D00851DEF /* AuthenticationViewController.swift */; };
+		CCA5E56A28C542480025DBDB /* TitleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA5E56928C542480025DBDB /* TitleDetailViewController.swift */; };
+		CCA5E56C28C67B510025DBDB /* TitleTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA5E56B28C67B510025DBDB /* TitleTabBarController.swift */; };
+		CCA5E56E28C6818C0025DBDB /* TitleTabBarController+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA5E56D28C6818C0025DBDB /* TitleTabBarController+Items.swift */; };
+		CCA5E57028C683FF0025DBDB /* UINavigationController+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA5E56F28C683FF0025DBDB /* UINavigationController+Items.swift */; };
 		CCC3093228BD7178001B65F8 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC3093128BD7178001B65F8 /* Chapter.swift */; };
 		CCC3093628BD749E001B65F8 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC3093528BD749E001B65F8 /* Place.swift */; };
 		CCC3093828BD7548001B65F8 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC3093728BD7548001B65F8 /* Character.swift */; };
@@ -49,6 +53,10 @@
 		CC88FA6628B8505300851DEF /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		CC88FA6828B8505F00851DEF /* FirebaseDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseManager.swift; sourceTree = "<group>"; };
 		CC88FA6C28B85B5D00851DEF /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		CCA5E56928C542480025DBDB /* TitleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDetailViewController.swift; sourceTree = "<group>"; };
+		CCA5E56B28C67B510025DBDB /* TitleTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTabBarController.swift; sourceTree = "<group>"; };
+		CCA5E56D28C6818C0025DBDB /* TitleTabBarController+Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TitleTabBarController+Items.swift"; sourceTree = "<group>"; };
+		CCA5E56F28C683FF0025DBDB /* UINavigationController+Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Items.swift"; sourceTree = "<group>"; };
 		CCC3093128BD7178001B65F8 /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
 		CCC3093528BD749E001B65F8 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		CCC3093728BD7548001B65F8 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -91,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				CC55BCBE28BE9A990015B1BE /* Firebase+Errors.swift */,
+				CCA5E56D28C6818C0025DBDB /* TitleTabBarController+Items.swift */,
+				CCA5E56F28C683FF0025DBDB /* UINavigationController+Items.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -195,6 +205,8 @@
 			children = (
 				CC7B480928B662D500A3A2B6 /* ViewController.swift */,
 				CC88FA6C28B85B5D00851DEF /* AuthenticationViewController.swift */,
+				CCA5E56928C542480025DBDB /* TitleDetailViewController.swift */,
+				CCA5E56B28C67B510025DBDB /* TitleTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -329,9 +341,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCC3094128BD7AC4001B65F8 /* DummyData.swift in Sources */,
+				CCA5E56C28C67B510025DBDB /* TitleTabBarController.swift in Sources */,
 				CCC3093828BD7548001B65F8 /* Character.swift in Sources */,
 				CCC3094328BE598D001B65F8 /* FictionalName.swift in Sources */,
 				CC88FA6728B8505300851DEF /* FirebaseAuthManager.swift in Sources */,
+				CCA5E56E28C6818C0025DBDB /* TitleTabBarController+Items.swift in Sources */,
 				CC55BCEE28C3B6EE0015B1BE /* TitleTableCellViewModel.swift in Sources */,
 				CC55BCC328BE9E000015B1BE /* AllStrings.strings.swift in Sources */,
 				CCC3093C28BD77C5001B65F8 /* Organization.swift in Sources */,
@@ -341,7 +355,9 @@
 				CCC3093A28BD7684001B65F8 /* Relationship.swift in Sources */,
 				CC55BCC528BEBBE40015B1BE /* Title.swift in Sources */,
 				CC55BCBF28BE9A990015B1BE /* Firebase+Errors.swift in Sources */,
+				CCA5E57028C683FF0025DBDB /* UINavigationController+Items.swift in Sources */,
 				CC55BCEB28C143820015B1BE /* TitleTableViewCell.swift in Sources */,
+				CCA5E56A28C542480025DBDB /* TitleDetailViewController.swift in Sources */,
 				CC7B480A28B662D500A3A2B6 /* ViewController.swift in Sources */,
 				CC7B480628B662D500A3A2B6 /* AppDelegate.swift in Sources */,
 				CCC3093628BD749E001B65F8 /* Place.swift in Sources */,
